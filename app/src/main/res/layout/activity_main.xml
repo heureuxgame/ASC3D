@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Portrait version of activity_main layout -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button"
+        android:gravity="center"
+
+        android:padding="6sp"
+        android:text="Clear All"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTargets" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/my_button"
+        android:onClick="addScore"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_layout" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/my_button"
+        android:onClick="addScore"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/grid_layout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/my_button"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_layout" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/my_button"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/my_button"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="@dimen/button_layout_size"
+        android:layout_height="@dimen/button_layout_size"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/my_button"
+        android:text="12"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:columnCount="1"
+        android:rowCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTargetVal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+
+            android:textColor="@color/colorPrimaryText">
+
+            <TextView
+                android:id="@+id/tVscr1"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr2"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr3"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr4"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr5"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr6"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr7"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr8"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr9"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr10"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_score_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tVscr11"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr12"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr13"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr14"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr15"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr16"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr17"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr18"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr19"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr20"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row_score_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+
+            android:textColor="@color/colorPrimaryText">
+
+            <TextView
+                android:id="@+id/tVscr21"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr22"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr23"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr24"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr25"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr26"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr27"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr28"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr29"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr30"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_weight="1"
+                android:background="@drawable/score_bkg_dark"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_score_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tVscr01"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/score_box_height"
+                android:gravity="center"
+                android:text="12-Count "
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+            <TextView
+                android:id="@+id/tVscr0"
+                android:layout_width="@dimen/score_box_width"
+                android:layout_height="@dimen/score_box_height"
+                android:layout_marginLeft="@dimen/default_gap"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/score_box_text_size" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewTargets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/heading_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/heading_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTargetVal"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="50"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/totals_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTargets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTargets" />
+
+    <TextView
+        android:id="@+id/textViewTotalVal"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="222"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/totals_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotal"
+        app:layout_constraintRight_toRightOf="@+id/textViewTotal"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

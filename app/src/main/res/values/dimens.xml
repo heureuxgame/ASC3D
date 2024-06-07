@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heading_text_size">28sp</dimen>
+    <dimen name="button_text_size">32sp</dimen>
+    <dimen name="totals_text_size">28sp</dimen>
+    <dimen name="button_top_margin">32sp</dimen>
+    <dimen name="button_layout_size">95dp</dimen>
+    <dimen name="score_box_width">36dp</dimen>
+    <dimen name="score_box_height">36dp</dimen>
+    <dimen name="score_box_text_size">20sp</dimen>
+    <dimen name="margin_normal">16sp</dimen>
+
+</resources>

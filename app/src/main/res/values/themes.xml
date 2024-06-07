@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.KIMSCO" parent="android:Theme.Material.Light.DarkActionBar" >
+    <item
+        name="alertDialogTheme">@style/ThemeOverlay.AppCompat.Dialog.Alert
+    </item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorPrimary">@color/teal_200</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+</resources>
+

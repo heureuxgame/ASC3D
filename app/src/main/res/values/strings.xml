@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KimScore</string>
+    <string name="twelve_count">12-count</string>
+    <string name="x_count">X-count</string>
+    <string name="asa">5-8-10-12</string>
+    <string name="vegas">10-X</string>
+</resources>
