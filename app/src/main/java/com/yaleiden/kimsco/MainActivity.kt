@@ -19,7 +19,7 @@ import androidx.core.content.ContextCompat
 class MainActivity : ComponentActivity() {
 
     private val mainActivityViewModel by viewModels<MainActivityViewModel>()
-    lateinit var buttonArray: Array<Button>  // Score buttons
+    private lateinit var buttonArray: Array<Button>  // Score buttons
     val TAG = "MainActivity"
 
     lateinit var textViewTargetVal: TextView  // Shows active target number
