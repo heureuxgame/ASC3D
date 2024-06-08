@@ -20,47 +20,47 @@ class MainActivity : ComponentActivity() {
 
     private val mainActivityViewModel by viewModels<MainActivityViewModel>()
     private lateinit var buttonArray: Array<Button>  // Score buttons
-    val TAG = "MainActivity"
+    private val tag = "MainActivity"
 
-    lateinit var textViewTargetVal: TextView  // Shows active target number
-    lateinit var textViewTotalVal: TextView  // Shows total score
-    lateinit var textViewScoreArray: Array<TextView>  // Holds score boxes
+    private lateinit var textViewTargetVal: TextView  // Shows active target number
+    private lateinit var textViewTotalVal: TextView  // Shows total score
+    private lateinit var textViewScoreArray: Array<TextView>  // Holds score boxes
 
     //  Score boxes
-    lateinit var tVscr0: TextView
-    lateinit var tVscr1: TextView
-    lateinit var tVscr2: TextView
-    lateinit var tVscr3: TextView
-    lateinit var tVscr4: TextView
-    lateinit var tVscr5: TextView
-    lateinit var tVscr6: TextView
-    lateinit var tVscr7: TextView
-    lateinit var tVscr8: TextView
-    lateinit var tVscr9: TextView
-    lateinit var tVscr10: TextView
-    lateinit var tVscr11: TextView
-    lateinit var tVscr12: TextView
-    lateinit var tVscr13: TextView
-    lateinit var tVscr14: TextView
-    lateinit var tVscr15: TextView
-    lateinit var tVscr16: TextView
-    lateinit var tVscr17: TextView
-    lateinit var tVscr18: TextView
-    lateinit var tVscr19: TextView
-    lateinit var tVscr20: TextView
-    lateinit var tVscr21: TextView
-    lateinit var tVscr22: TextView
-    lateinit var tVscr23: TextView
-    lateinit var tVscr24: TextView
-    lateinit var tVscr25: TextView
-    lateinit var tVscr26: TextView
-    lateinit var tVscr27: TextView
-    lateinit var tVscr28: TextView
-    lateinit var tVscr29: TextView
-    lateinit var tVscr30: TextView
+    private lateinit var tVscr0: TextView
+    private lateinit var tVscr1: TextView
+    private lateinit var tVscr2: TextView
+    private lateinit var tVscr3: TextView
+    private lateinit var tVscr4: TextView
+    private lateinit var tVscr5: TextView
+    private lateinit var tVscr6: TextView
+    private lateinit var tVscr7: TextView
+    private lateinit var tVscr8: TextView
+    private lateinit var tVscr9: TextView
+    private lateinit var tVscr10: TextView
+    private lateinit var tVscr11: TextView
+    private lateinit var tVscr12: TextView
+    private lateinit var tVscr13: TextView
+    private lateinit var tVscr14: TextView
+    private lateinit var tVscr15: TextView
+    private lateinit var tVscr16: TextView
+    private lateinit var tVscr17: TextView
+    private lateinit var tVscr18: TextView
+    private lateinit var tVscr19: TextView
+    private lateinit var tVscr20: TextView
+    private lateinit var tVscr21: TextView
+    private lateinit var tVscr22: TextView
+    private lateinit var tVscr23: TextView
+    private lateinit var tVscr24: TextView
+    private lateinit var tVscr25: TextView
+    private lateinit var tVscr26: TextView
+    private lateinit var tVscr27: TextView
+    private lateinit var tVscr28: TextView
+    private lateinit var tVscr29: TextView
+    private lateinit var tVscr30: TextView
 
     //  bonus count box
-    lateinit var tVscr01: TextView
+    private lateinit var tVscr01: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,8 +73,8 @@ class MainActivity : ComponentActivity() {
         }
 
         // Initialize textviews for Total and Active Target
-        textViewTargetVal = findViewById<TextView>(R.id.textViewTargetVal)
-        textViewTotalVal = findViewById<TextView>(R.id.textViewTotalVal)
+        textViewTargetVal = findViewById(R.id.textViewTargetVal)
+        textViewTotalVal = findViewById(R.id.textViewTotalVal)
         // Initialize scoring buttons
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
@@ -83,40 +83,40 @@ class MainActivity : ComponentActivity() {
         val button5 = findViewById<Button>(R.id.button5)
         val button6 = findViewById<Button>(R.id.button6)
         //  Initialize individual target value textviews
-        tVscr0 = findViewById<TextView>(R.id.tVscr0)  // textview for 12 count
-        tVscr1 = findViewById<TextView>(R.id.tVscr1)  // textview for target number 1
-        tVscr2 = findViewById<TextView>(R.id.tVscr2)
-        tVscr3 = findViewById<TextView>(R.id.tVscr3)
-        tVscr4 = findViewById<TextView>(R.id.tVscr4)
-        tVscr5 = findViewById<TextView>(R.id.tVscr5)
-        tVscr6 = findViewById<TextView>(R.id.tVscr6)
-        tVscr7 = findViewById<TextView>(R.id.tVscr7)
-        tVscr8 = findViewById<TextView>(R.id.tVscr8)
-        tVscr9 = findViewById<TextView>(R.id.tVscr9)
-        tVscr10 = findViewById<TextView>(R.id.tVscr10)
-        tVscr11 = findViewById<TextView>(R.id.tVscr11)
-        tVscr12 = findViewById<TextView>(R.id.tVscr12)
-        tVscr13 = findViewById<TextView>(R.id.tVscr13)
-        tVscr14 = findViewById<TextView>(R.id.tVscr14)
-        tVscr15 = findViewById<TextView>(R.id.tVscr15)
-        tVscr16 = findViewById<TextView>(R.id.tVscr16)
-        tVscr17 = findViewById<TextView>(R.id.tVscr17)
-        tVscr18 = findViewById<TextView>(R.id.tVscr18)
-        tVscr19 = findViewById<TextView>(R.id.tVscr19)
-        tVscr20 = findViewById<TextView>(R.id.tVscr20)
-        tVscr21 = findViewById<TextView>(R.id.tVscr21)
-        tVscr22 = findViewById<TextView>(R.id.tVscr22)
-        tVscr23 = findViewById<TextView>(R.id.tVscr23)
-        tVscr24 = findViewById<TextView>(R.id.tVscr24)
-        tVscr25 = findViewById<TextView>(R.id.tVscr25)
-        tVscr26 = findViewById<TextView>(R.id.tVscr26)
-        tVscr27 = findViewById<TextView>(R.id.tVscr27)
-        tVscr28 = findViewById<TextView>(R.id.tVscr28)
-        tVscr29 = findViewById<TextView>(R.id.tVscr29)
-        tVscr30 = findViewById<TextView>(R.id.tVscr30)
+        tVscr0 = findViewById(R.id.tVscr0)  // textview for 12 count
+        tVscr1 = findViewById(R.id.tVscr1)  // textview for target number 1
+        tVscr2 = findViewById(R.id.tVscr2)
+        tVscr3 = findViewById(R.id.tVscr3)
+        tVscr4 = findViewById(R.id.tVscr4)
+        tVscr5 = findViewById(R.id.tVscr5)
+        tVscr6 = findViewById(R.id.tVscr6)
+        tVscr7 = findViewById(R.id.tVscr7)
+        tVscr8 = findViewById(R.id.tVscr8)
+        tVscr9 = findViewById(R.id.tVscr9)
+        tVscr10 = findViewById(R.id.tVscr10)
+        tVscr11 = findViewById(R.id.tVscr11)
+        tVscr12 = findViewById(R.id.tVscr12)
+        tVscr13 = findViewById(R.id.tVscr13)
+        tVscr14 = findViewById(R.id.tVscr14)
+        tVscr15 = findViewById(R.id.tVscr15)
+        tVscr16 = findViewById(R.id.tVscr16)
+        tVscr17 = findViewById(R.id.tVscr17)
+        tVscr18 = findViewById(R.id.tVscr18)
+        tVscr19 = findViewById(R.id.tVscr19)
+        tVscr20 = findViewById(R.id.tVscr20)
+        tVscr21 = findViewById(R.id.tVscr21)
+        tVscr22 = findViewById(R.id.tVscr22)
+        tVscr23 = findViewById(R.id.tVscr23)
+        tVscr24 = findViewById(R.id.tVscr24)
+        tVscr25 = findViewById(R.id.tVscr25)
+        tVscr26 = findViewById(R.id.tVscr26)
+        tVscr27 = findViewById(R.id.tVscr27)
+        tVscr28 = findViewById(R.id.tVscr28)
+        tVscr29 = findViewById(R.id.tVscr29)
+        tVscr30 = findViewById(R.id.tVscr30)
 
         // Initialize bonus count
-        tVscr01 = findViewById<TextView>(R.id.tVscr01)
+        tVscr01 = findViewById(R.id.tVscr01)
 
         // Define array so we can use position to update text
         textViewScoreArray = arrayOf(
@@ -143,9 +143,9 @@ class MainActivity : ComponentActivity() {
         // Out of sequence to make buttons easier for right handed user
         buttonArray = arrayOf(button1, button2, button3, button6, button5, button4)
 
-        textViewTargetVal.setText(mainActivityViewModel.mScores.activeTarget.toString())
+        textViewTargetVal.text = mainActivityViewModel.mScores.activeTarget.toString()
 
-        textViewTotalVal.setText(mainActivityViewModel.mScores.totalScore.toString())
+        textViewTotalVal.text = mainActivityViewModel.mScores.totalScore.toString()
         setButtons(buttonArray, scoreArray1)
 
         activeTargetHighlight(mainActivityViewModel.mScores.activeTarget)
@@ -174,28 +174,28 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    fun startVegas(){
+    private fun startVegas(){
         startActivity(Intent(this@MainActivity,VegasActivity::class.java))
     }
 
     /**
      * Set the values displayed on the UI score buttons to the values in the scoreArray
      */
-    fun setButtons(buttonArray: Array<Button>, intArray: IntArray) {
+    private fun setButtons(buttonArray: Array<Button>, intArray: IntArray) {
 
-        for (i in 0..buttonArray.size - 1) {
+        for (i in buttonArray.indices) {
             if (i < intArray.size) {
                 // Set scoreArray value as text on button
-                buttonArray.get(i).setText(intArray.get(i).toString())
+                buttonArray[i].text = intArray[i].toString()
                 // Set stringArray value as text on button
-                buttonArray.get(i).setText(intArray.get(i).toString())
+                buttonArray[i].text = intArray[i].toString()
                 // Set addScore() as onClick() function
-                buttonArray.get(i).setOnClickListener() {
-                    addScore(intArray.get(i))
+                buttonArray[i].setOnClickListener {
+                    addScore(intArray[i])
                 }
             } else {
                 // Remove button if we don't have a value for it
-                buttonArray.get(i).visibility = View.INVISIBLE
+                buttonArray[i].visibility = View.INVISIBLE
             }
         }
 
@@ -204,11 +204,11 @@ class MainActivity : ComponentActivity() {
     /**
      * set the onClick function for score textviews
      */
-    fun setScoreTextViews(textViewArray: Array<TextView>) {
+    private fun setScoreTextViews(textViewArray: Array<TextView>) {
 
-        for (i in 1..mainActivityViewModel.mScores.scores.size - 1) {
+        for (i in 1 until mainActivityViewModel.mScores.scores.size) {
 
-            textViewArray.get(i).setOnClickListener() {
+            textViewArray[i].setOnClickListener {
                 textViewOnClick(i)
             }
         }
@@ -219,19 +219,19 @@ class MainActivity : ComponentActivity() {
      * @param int: The number of the active target
      *         Changes background color of textview
      */
-    fun activeTargetHighlight(target: Int) {
+    private fun activeTargetHighlight(target: Int) {
 
         if (mainActivityViewModel.mScores.activeTarget <= mainActivityViewModel.mScores.scores.size - 1) {
 
-            for (i in 1..mainActivityViewModel.mScores.scores.size - 1) {
+            for (i in 1 until mainActivityViewModel.mScores.scores.size) {
                 textViewScoreArray[i].setBackgroundResource(R.drawable.score_bkg_dark)
                 if (i <= 5) {
                     textViewScoreArray[i].setBackgroundResource(R.drawable.score_bkg_light)
                 }
-                if (i >= 16 && i <= 20) {
+                if (i in 16..20) {
                     textViewScoreArray[i].setBackgroundResource(R.drawable.score_bkg_light)
                 }
-                if (i >= 21 && i <= 25) {
+                if (i in 21..25) {
                     textViewScoreArray[i].setBackgroundResource(R.drawable.score_bkg_light)
                 }
             }
@@ -252,22 +252,22 @@ class MainActivity : ComponentActivity() {
             // tally scores in array
             mainActivityViewModel.mScores.totalScore = mainActivityViewModel.totalScore()
             //textViewScoreArray[activeTarget].setText(score.toString())
-            textViewScoreArray[mainActivityViewModel.mScores.activeTarget].setText(score.toString())
+            textViewScoreArray[mainActivityViewModel.mScores.activeTarget].text = score.toString()
             //activeTarget += 1 //Increment target count
             mainActivityViewModel.mScores.activeTarget += 1 //Increment target count
             setDisplayAfterScore()
-            Log.d(TAG, "mainActivityViewModel.totalScore = " + mainActivityViewModel.mScores.totalScore)
-            Log.d(TAG, "mainActivityViewModel.totalScore() = " + mainActivityViewModel.totalScore())
+            Log.d(tag, "mainActivityViewModel.totalScore = " + mainActivityViewModel.mScores.totalScore)
+            Log.d(tag, "mainActivityViewModel.totalScore() = " + mainActivityViewModel.totalScore())
         } else {
             Toast.makeText(this, "30 targets scored", Toast.LENGTH_SHORT).show()
-            Log.d(TAG, "addScore Toast.makeText")
+            Log.d(tag, "addScore Toast.makeText")
         }
     }
 
     /**
      * AlertDialog before clearing scores and reset UI
      */
-    fun clearScores() {
+    private fun clearScores() {
 
         val builder = AlertDialog.Builder(this, R.style.ThemeOverlay_AppCompat_Dialog_Alert)
         builder.setMessage("Do you want to clear all scores?")
@@ -289,11 +289,11 @@ class MainActivity : ComponentActivity() {
      * set new 12 count
      * set new Target value
      */
-    fun setDisplayAfterScore() {
-        textViewTotalVal.setText(mainActivityViewModel.mScores.totalScore.toString())
-        Log.d(TAG, "1 setDisplayAfterScore activeTarget = " + mainActivityViewModel.mScores.activeTarget)
+    private fun setDisplayAfterScore() {
+        textViewTotalVal.text = mainActivityViewModel.mScores.totalScore.toString()
+        Log.d(tag, "1 setDisplayAfterScore activeTarget = " + mainActivityViewModel.mScores.activeTarget)
         // get 12 count from array and update ui
-        tVscr0.setText(mainActivityViewModel.twelveCount().toString())
+        tVscr0.text = mainActivityViewModel.twelveCount().toString()
         // Avoid getting index out of bounds
         if (mainActivityViewModel.mScores.activeTarget > mainActivityViewModel.mScores.scores.size - 1){
             Toast.makeText(this, "30 targets scored", Toast.LENGTH_SHORT).show()
@@ -301,11 +301,11 @@ class MainActivity : ComponentActivity() {
         }
         if (mainActivityViewModel.mScores.activeTarget <= mainActivityViewModel.mScores.scores.size - 1) {
             Log.d(
-                TAG,
+                tag,
                 "2 setDisplayAfterScore mainActivityViewModel.activeTarget = " + mainActivityViewModel.mScores.activeTarget
             )
             //activeTargetHighlight(activeTarget)
-            textViewTargetVal.setText(mainActivityViewModel.mScores.activeTarget.toString())
+            textViewTargetVal.text = mainActivityViewModel.mScores.activeTarget.toString()
             activeTargetHighlight(mainActivityViewModel.mScores.activeTarget)
         }
     }
@@ -319,30 +319,30 @@ class MainActivity : ComponentActivity() {
 
         if (mainActivityViewModel.mScores.activeTarget <= mainActivityViewModel.mScores.scores.size - 1) {
 
-            for (i in 1..mainActivityViewModel.mScores.scores.size - 1) {
+            for (i in 1 until mainActivityViewModel.mScores.scores.size) {
                  var text = ""
                  if (mainActivityViewModel.mScores.scores[i] != null) {
                      text = mainActivityViewModel.mScores.scores[i].toString()
                  }
-                textViewScoreArray[i].setText(text)
+                textViewScoreArray[i].text = text
             }
             textViewScoreArray[mainActivityViewModel.mScores.activeTarget].setBackgroundColor(
-                getResources().getColor(
+                ContextCompat.getColor(applicationContext,
                     R.color.highlight
                 )
             )
 
-            textViewTotalVal.setText(mainActivityViewModel.mScores.totalScore.toString())
-            Log.d(TAG, "1 setInitialDisplay activeTarget = " + mainActivityViewModel.mScores.activeTarget)
+            textViewTotalVal.text = mainActivityViewModel.mScores.totalScore.toString()
+            Log.d(tag, "1 setInitialDisplay activeTarget = " + mainActivityViewModel.mScores.activeTarget)
             // get 12 count from array and update ui
-            tVscr0.setText(mainActivityViewModel.mScores.twelveCount().toString())
+            tVscr0.text = mainActivityViewModel.mScores.twelveCount().toString()
             // Avoid getting index out of bounds
             if (mainActivityViewModel.mScores.activeTarget <= mainActivityViewModel.mScores.scores.size - 1) {
                 Log.d(
-                    TAG,
+                    tag,
                     "2 setInitialDisplay mainActivityViewModel.activeTarget = " + mainActivityViewModel.mScores.activeTarget
                 )
-                textViewTargetVal.setText(mainActivityViewModel.mScores.activeTarget.toString())
+                textViewTargetVal.text = mainActivityViewModel.mScores.activeTarget.toString()
                 activeTargetHighlight(mainActivityViewModel.mScores.activeTarget)
             }
         }
@@ -354,11 +354,11 @@ class MainActivity : ComponentActivity() {
      * highlight selected textview
      * change Target number to selected
      */
-    fun textViewOnClick(position: Int) {
+    private fun textViewOnClick(position: Int) {
         //activeTarget = position
         mainActivityViewModel.mScores.activeTarget = position
         activeTargetHighlight(position)
-        textViewTargetVal.setText(position.toString())
+        textViewTargetVal.text = position.toString()
     }
 
 
